@@ -20,23 +20,23 @@ def randomize():
     #picks a random picture from the assets/towers/earlygame folder and sets it as the texture for the slot1 entity
     slot1.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot1.texture = random.choice(os.listdir('assets\\towers\\earlygame\\'))
+        slot1.texture = random.choice(os.listdir(os.getcwd + 'assets\\towers\\earlygame\\'))
         time.sleep(0.01)
     slot2.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot2.texture = random.choice(os.listdir('assets\\towers\\midgame'))
+        slot2.texture = random.choice(os.listdir(os.getcwd + 'assets\\towers\\midgame'))
         time.sleep(0.01)
     slot3.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot3.texture = random.choice(os.listdir('assets\\towers\\midgame'))
+        slot3.texture = random.choice(os.listdir(os.getcwd + 'assets\\towers\\midgame'))
         time.sleep(0.01)
     slot4.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot4.texture = random.choice(os.listdir('assets\\towers\\lategame'))
+        slot4.texture = random.choice(os.listdir(os.getcwd + 'assets\\towers\\lategame'))
         time.sleep(0.01)
     slot5.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot5.texture = random.choice(os.listdir('assets\\towers\\support'))
+        slot5.texture = random.choice(os.listdir(os.getcwd + 'assets\\towers\\support'))
         time.sleep(0.01)
 
 def randomizeFullRandom():
