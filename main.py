@@ -24,11 +24,16 @@ def randomize():
         time.sleep(0.01)
     slot2.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot2.texture = random.choice(os.listdir(os.path.join(sys.path[0], 'assets', 'towers', 'midgame')))
+        chosenfirst = random.choice(os.listdir(os.path.join(sys.path[0], 'assets', 'towers', 'midgame')))
+        slot2.texture = chosenfirst
         time.sleep(0.01)
     slot3.alpha = 1
     for i in range(random.randint(1, 50)):
-        slot3.texture = random.choice(os.listdir(os.path.join(sys.path[0], 'assets', 'towers', 'midgame')))
+        #makes sure that the texture for slot3 is different from the texture for slot2
+        chosensecond = random.choice(os.listdir(os.path.join(sys.path[0], 'assets', 'towers', 'midgame')))
+        while chosensecond == chosenfirst:
+            chosensecond = random.choice(os.listdir(os.path.join(sys.path[0], 'assets', 'towers', 'midgame')))
+        slot3.texture = chosensecond
         time.sleep(0.01)
     slot4.alpha = 1
     for i in range(random.randint(1, 50)):
